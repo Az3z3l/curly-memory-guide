@@ -31,8 +31,13 @@ int main()
 
     vector<int> minewine = first_fit(memory_block,process_list);
     for(int o=0; o<minewine.size(); o++)
-    {
-        cout<<minewine[o]<<endl;
+    {   if(minewine[o]== -100)
+        {
+            cout<<"Memory"<<o<<" has the no in process "<<endl;
+        }
+        else{
+        cout<<"Memory"<<o<<" has the process "<<minewine[o]<<endl;
+        }
     }
     return 0;
 }
