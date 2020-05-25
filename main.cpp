@@ -54,7 +54,7 @@ int main()
         }
     }
     cout<<endl<<"Worst Fit Algorithm"<<endl;
-    vector<int> order = Worst_fit(memory_block,process_list);
+    vector<int> order = worst_fit(memory_block,process_list);
     for(int o=0; o<order.size(); o++)
     {   if(order[o]== -100)
         {
