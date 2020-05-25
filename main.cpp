@@ -53,6 +53,17 @@ int main()
         cout<<"Memory"<<o<<" has the process "<<order[o]<<endl;
         }
     }
+    cout<<endl<<"Worst Fit Algorithm"<<endl;
+    vector<int> order = Worst_fit(memory_block,process_list);
+    for(int o=0; o<order.size(); o++)
+    {   if(order[o]== -100)
+        {
+            cout<<"Memory"<<o<<" has the no in process "<<endl;
+        }
+        else{
+        cout<<"Memory"<<o<<" has the process "<<order[o]<<endl;
+        }
+    }
 
     return 0;
 }
