@@ -12,17 +12,17 @@ int memory_job[memory_blocks.size()],memory_status[memory_blocks.size()];
         int wstIdx = -1; 
         for(int j=0; j<memory_blocks.size(); j++)
         {
-        if((memory_blocks.size[j] >= process_queue.size[i])&& (memory_status[j] == 0))
+        if((memory_blocks[j] >= process_queue[i])&& (memory_status[j] == 0))
             { 
                 if (wstIdx == -1) 
                     wstIdx = j; 
-                else if (memory_blocks.size[wstIdx] < memory_blocks.size[j]) 
+                else if (memory_blocks[wstIdx] < memory_blocks[j]) 
                     wstIdx = j; 
             } 
         } 
         if (wstIdx != -1) 
         {      
-         memory_block.size[wstIdx] -= process_queue.size[i]; 
+         memory_blocks[wstIdx] -= process_queue[i]; 
         } 
     }
      vector <int> temp(memory_job,memory_job +  memory_blocks.size());
