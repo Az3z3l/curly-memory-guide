@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <vector>
 #include "first_fit.cpp"
+#include "best_fit.cpp"
 using namespace std;
 int main()
 {
@@ -29,6 +30,7 @@ int main()
         p_size--;
     }
 
+    cout<<endl<<"First Fit Algorithm"<<endl;
     vector<int> minewine = first_fit(memory_block,process_list);
     for(int o=0; o<minewine.size(); o++)
     {   if(minewine[o]== -100)
@@ -39,5 +41,18 @@ int main()
         cout<<"Memory"<<o<<" has the process "<<minewine[o]<<endl;
         }
     }
+
+    cout<<endl<<"Best Fit Algorithm"<<endl;
+    vector<int> order = best_fit(memory_block,process_list);
+    for(int o=0; o<order.size(); o++)
+    {   if(order[o]== -100)
+        {
+            cout<<"Memory"<<o<<" has the no in process "<<endl;
+        }
+        else{
+        cout<<"Memory"<<o<<" has the process "<<order[o]<<endl;
+        }
+    }
+
     return 0;
 }
