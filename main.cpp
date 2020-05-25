@@ -47,16 +47,16 @@ int main()
     }
 
     cout<<endl<<"First Fit Algorithm"<<endl;
-    vector<int> minewine = first_fit(memory_block,process_list);
-    print(minewine);
+    vector<int> first = first_fit(memory_block,process_list);
+    print(first);
 
     cout<<endl<<"Best Fit Algorithm"<<endl;
-    vector<int> order = best_fit(memory_block,process_list);
-    print(order);
+    vector<int> best = best_fit(memory_block,process_list);
+    print(best);
   
     cout<<endl<<"Worst Fit Algorithm"<<endl;
-    vector<int> order = worst_fit(memory_block,process_list);
-    print(order);
+    vector<int> worst = worst_fit(memory_block,process_list);
+    print(worst);
 
     return 0;
 }
