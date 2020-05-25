@@ -3,7 +3,23 @@
 #include <vector>
 #include "first_fit.cpp"
 #include "best_fit.cpp"
+#include "worst_fit.cpp"
 using namespace std;
+
+
+void print(vector <int> order){
+    for(int o=0; o<order.size(); o++)
+    {   if(order[o]== -100)
+        {
+            cout<<"Memory"<<o<<" has the no in process "<<endl;
+        }
+        else{
+        cout<<"Memory"<<o<<" has the process "<<order[o]<<endl;
+        }
+    }
+}
+
+
 int main()
 {
     vector <int> memory_block,process_list;
@@ -32,38 +48,15 @@ int main()
 
     cout<<endl<<"First Fit Algorithm"<<endl;
     vector<int> minewine = first_fit(memory_block,process_list);
-    for(int o=0; o<minewine.size(); o++)
-    {   if(minewine[o]== -100)
-        {
-            cout<<"Memory"<<o<<" has the no in process "<<endl;
-        }
-        else{
-        cout<<"Memory"<<o<<" has the process "<<minewine[o]<<endl;
-        }
-    }
+    print(minewine);
 
     cout<<endl<<"Best Fit Algorithm"<<endl;
     vector<int> order = best_fit(memory_block,process_list);
-    for(int o=0; o<order.size(); o++)
-    {   if(order[o]== -100)
-        {
-            cout<<"Memory"<<o<<" has the no in process "<<endl;
-        }
-        else{
-        cout<<"Memory"<<o<<" has the process "<<order[o]<<endl;
-        }
-    }
+    print(order);
+  
     cout<<endl<<"Worst Fit Algorithm"<<endl;
     vector<int> order = worst_fit(memory_block,process_list);
-    for(int o=0; o<order.size(); o++)
-    {   if(order[o]== -100)
-        {
-            cout<<"Memory"<<o<<" has the no in process "<<endl;
-        }
-        else{
-        cout<<"Memory"<<o<<" has the process "<<order[o]<<endl;
-        }
-    }
+    print(order);
 
     return 0;
 }
