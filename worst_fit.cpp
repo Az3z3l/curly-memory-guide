@@ -21,14 +21,10 @@ int memory_job[memory_blocks.size()],memory_status[memory_blocks.size()];
             } 
         } 
         if (wstIdx != -1) 
-        { 
-            
-            
-  
-           
-            memory_block.size[wstIdx] -= process_queue.size[i]; 
+        {      
+         memory_block.size[wstIdx] -= process_queue.size[i]; 
         } 
-    } 
+    }
      vector <int> temp(memory_job,memory_job +  memory_blocks.size());
     
     return temp;
