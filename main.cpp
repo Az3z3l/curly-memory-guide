@@ -4,6 +4,9 @@
 #include "first_fit.cpp"
 #include "best_fit.cpp"
 #include "worst_fit.cpp"
+#include "worst_fit_dynamic.cpp"
+#include "best_fit_dynamic.cpp"
+
 using namespace std;
 
 
@@ -11,10 +14,10 @@ void print(vector <int> order){
     for(int o=0; o<order.size(); o++)
     {   if(order[o]== -100)
         {
-            cout<<"Memory"<<o<<" has the no in process "<<endl;
+            cout<<"Process"<<o<<" has the no in process "<<endl;
         }
         else{
-        cout<<"Memory"<<o<<" has the process "<<order[o]<<endl;
+        cout<<"Processs "<<o<<" is in the mem block "<<order[o]<<endl;
         }
     }
 }
@@ -46,17 +49,25 @@ int main()
         p_size--;
     }
 
-    cout<<endl<<"First Fit Algorithm"<<endl;
-    vector<int> first = first_fit(memory_block,process_list);
-    print(first);
+    // cout<<endl<<"First Fit Algorithm"<<endl;
+    // vector<int> first = first_fit(memory_block,process_list);
+    // print(first);
 
-    cout<<endl<<"Best Fit Algorithm"<<endl;
-    vector<int> best = best_fit(memory_block,process_list);
-    print(best);
+    // cout<<endl<<"Best Fit Algorithm"<<endl;
+    // vector<int> best = best_fit(memory_block,process_list);
+    // print(best);
   
-    cout<<endl<<"Worst Fit Algorithm"<<endl;
-    vector<int> worst = worst_fit(memory_block,process_list);
-    print(worst);
+    // cout<<endl<<"Worst Fit Algorithm"<<endl;
+    // vector<int> worst = worst_fit(memory_block,process_list);
+    // print(worst);
+
+    // cout<<endl<<"Dynamic Worst Fit Algorithm"<<endl;
+    // vector<int> dworst = d_worst_fit(memory_block,process_list);
+    // print(dworst);
+
+    cout<<endl<<"Dynamic Best Fit Algorithm"<<endl;
+    vector<int> dbest = d_best_fit(memory_block,process_list);
+    print(dbest);
 
     return 0;
 }
