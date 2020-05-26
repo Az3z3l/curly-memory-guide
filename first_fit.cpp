@@ -14,7 +14,7 @@ vector <int> first_fit(vector <int> memory_blocks, vector <int> process_queue){
 
             if((process_queue[i] <= memory_blocks[j]) &&(memory_status[j] == 0))
             {
-                memory_job[j] = i;
+                memory_job[i] = j;
                 memory_status[j] = 1;
                 break;      
             }
