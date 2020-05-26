@@ -31,7 +31,7 @@ vector <int> best_fit(vector <int> memory_blocks, vector <int> process_queue){
         }
         if (minimum!=-222)
         {
-            memory_job[minimum] = i;
+            memory_job[i] = minimum;
             memory_status[minimum] = 1;
         }
     }

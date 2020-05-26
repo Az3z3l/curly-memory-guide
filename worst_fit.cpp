@@ -33,8 +33,7 @@ int memory_job[memory_blocks.size()],memory_status[memory_blocks.size()];
         if (maximum != -222) 
         {   
             memory_status[maximum] = 1;
-            memory_job[maximum] = i;
-            memory_blocks[maximum] -= process_queue[i]; 
+            memory_job[i] = maximum;
         } 
     }
      vector <int> temp(memory_job,memory_job +  memory_blocks.size());
