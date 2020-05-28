@@ -11,11 +11,11 @@
 using namespace std;
 
 
-void print(vector <int> order){
-    for(int o=0; o<order.size(); o++)
+void print(vector <int> order, int size){
+    for(int o=0; o<size; o++)
     {   if(order[o]== -100)
         {
-            cout<<"Process"<<o<<" has the no in process "<<endl;
+            cout<<"Process "<<o<<" has the no in process "<<endl;
         }
         else{
         cout<<"Processs "<<o<<" is in the mem block "<<order[o]<<endl;
@@ -49,30 +49,30 @@ int main()
         process_list.push_back(inp);
         p_size--;
     }
-
+    int size=process_list.size();
     cout<<endl<<"First Fit Algorithm"<<endl;
     vector<int> first = first_fit(memory_block,process_list);
-    print(first);
+    print(first,size);
 
     cout<<endl<<"Best Fit Algorithm"<<endl;
     vector<int> best = best_fit(memory_block,process_list);
-    print(best);
+    print(best,size);
   
     cout<<endl<<"Worst Fit Algorithm"<<endl;
     vector<int> worst = worst_fit(memory_block,process_list);
-    print(worst);
+    print(worst,size);
 
     cout<<endl<<"Dynamic Worst Fit Algorithm"<<endl;
     vector<int> dworst = d_worst_fit(memory_block,process_list);
-    print(dworst);
+    print(dworst,size);
 
     cout<<endl<<"Dynamic Best Fit Algorithm"<<endl;
     vector<int> dbest = d_best_fit(memory_block,process_list);
-    print(dbest);
+    print(dbest,size);
 
     cout<<endl<<"Dynamic First Fit Algorithm"<<endl;
     vector<int> dfirst = d_first_fit(memory_block,process_list);
-    print(dfirst);
+    print(dfirst,size);
 
     return 0;
 }
