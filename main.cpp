@@ -15,10 +15,10 @@ void print(vector <int> order, int size){
     for(int o=0; o<size; o++)
     {   if(order[o]== -100)
         {
-            cout<<"Process "<<o<<" has the no in process "<<endl;
+            cout<<"Process "<<o<<" has not been alloted to any memory "<<endl;
         }
         else{
-        cout<<"Processs "<<o<<" is in the mem block "<<order[o]<<endl;
+        cout<<"Process "<<o<<" is in the memory block "<<order[o]<<endl;
         }
     }
 }
