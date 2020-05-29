@@ -32,6 +32,8 @@ int memory_job[memory_blocks.size()];
         if (maximum != -222) 
         {   
             memory_job[i] = maximum;
+             //similar to static here we reduce the memory space 
+             // once a process is assigned to it.
             memory_blocks[maximum] -= process_queue[i]; 
         } 
     }

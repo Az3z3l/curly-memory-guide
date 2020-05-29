@@ -52,6 +52,7 @@ int main()
         p_size--;
     }
     int size=process_list.size();
+    //Size paramter to limit to existing process
     cout<<endl<<"First Fit Algorithm"<<endl;
     vector<int> first = first_fit(memory_block,process_list);
     print(first,size);

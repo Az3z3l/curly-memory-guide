@@ -32,6 +32,8 @@ vector <int> d_best_fit(vector <int> memory_blocks, vector <int> process_queue){
         if (minimum!=-222)
         {
             memory_job[i] = minimum;
+             //similar to static here we reduce the memory space 
+             // once a process is assigned to it.
             memory_blocks[minimum] -= process_queue[i];
         }
     }

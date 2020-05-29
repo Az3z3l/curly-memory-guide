@@ -15,6 +15,8 @@ vector <int> d_first_fit(vector <int> memory_blocks, vector <int> process_queue)
             if((process_queue[i] <= memory_blocks[j]))
             {
                 memory_job[i] = j;
+                //similar to static here we reduce the memory space 
+                // once a process is assigned to it.
                 memory_blocks[j] -= process_queue[i];
                 break;      
             }
