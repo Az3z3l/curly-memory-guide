@@ -17,12 +17,17 @@ vector <int> best_fit(vector <int> memory_blocks, vector <int> process_queue){
         int minimum = -222;
         for(int j=0; j<memory_blocks.size(); j++)
         {
+            //Check if the memory space is bigger than the process.
             if((process_queue[i] <= memory_blocks[j]) && (memory_status[j] == 0))
             {
+                //if not assigned, assign as minimum
                 if(minimum==-222)
                 {
                     minimum = j;
                 }
+                // if the current memory space is greater than process size 
+                // and smaller already allocated memory 
+                // assgin the current memory space as minimum
                 else if(memory_blocks[j]<memory_blocks[minimum])
                 {
                     minimum = j;

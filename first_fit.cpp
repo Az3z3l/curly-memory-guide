@@ -12,7 +12,8 @@ vector <int> first_fit(vector <int> memory_blocks, vector <int> process_queue){
         for(int j=0; j<memory_blocks.size(); j++)
         {
 
-            if((process_queue[i] <= memory_blocks[j]) &&(memory_status[j] == 0))
+            if((process_queue[i] <= memory_blocks[j]) &&(memory_status[j] == 0)) 
+            //First fit condition and to check the status of the memory
             {
                 memory_job[i] = j;
                 memory_status[j] = 1;
@@ -22,5 +23,6 @@ vector <int> first_fit(vector <int> memory_blocks, vector <int> process_queue){
         }
     }
     vector <int> temp(memory_job,memory_job +  memory_blocks.size());
+    //converting the int array to vector
     return temp;
 }

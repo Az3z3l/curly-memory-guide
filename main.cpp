@@ -23,6 +23,8 @@ void print(vector <int> order, int size){
     }
 }
 
+//memory_block: Defines the memory space available
+//process_list: Contains the set of process to processed. 
 
 int main()
 {

@@ -17,6 +17,8 @@ int memory_job[memory_blocks.size()],memory_status[memory_blocks.size()];
         int maximum = -222; 
         for(int j=0; j<memory_blocks.size(); j++)
         {
+            //Finds the largest memory space in current and allocates
+            // to the current process
             if((memory_blocks[j] >= process_queue[i])&& (memory_status[j] == 0))
             { 
                 if (maximum == -222) 
