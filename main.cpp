@@ -65,17 +65,18 @@ int main()
     vector<int> worst = worst_fit(memory_block,process_list);
     print(worst,size);
 
-    cout<<endl<<"Dynamic Worst Fit Algorithm"<<endl;
-    vector<int> dworst = d_worst_fit(memory_block,process_list);
-    print(dworst,size);
+    cout<<endl<<"Dynamic First Fit Algorithm"<<endl;
+    vector<int> dfirst = d_first_fit(memory_block,process_list);
+    print(dfirst,size);
 
     cout<<endl<<"Dynamic Best Fit Algorithm"<<endl;
     vector<int> dbest = d_best_fit(memory_block,process_list);
     print(dbest,size);
 
-    cout<<endl<<"Dynamic First Fit Algorithm"<<endl;
-    vector<int> dfirst = d_first_fit(memory_block,process_list);
-    print(dfirst,size);
+
+    cout<<endl<<"Dynamic Worst Fit Algorithm"<<endl;
+    vector<int> dworst = d_worst_fit(memory_block,process_list);
+    print(dworst,size);
 
     return 0;
 }
